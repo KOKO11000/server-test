@@ -3,16 +3,16 @@ import uvicorn
 app = FastAPI()
 
 @app.get("/test")
-def start():
+def start(s):
     return {"messege": "welcome user!"}
 
-@app.get("/test/:name")
-def save_user():
+@app.get("/test/:{name}")
+def save_user(s):
     return {"messege": "saved user"}
 
 
 @app.post("/caasar")
-def caesar():
+def caesar(s):
     pass
 
 if __name__ == "__main__":
